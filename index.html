@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>final project</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>To-Do List Application</h1>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Add a new task">
+            
+            <select id="categorySelect" onchange="filterTasksByCategory()">
+                <!-- Categories will be dynamically populated by JavaScript -->
+                <option value="all">All Categories</option>
+
+            </select>
+            <button onclick="addTask()" class="submit">Submit</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

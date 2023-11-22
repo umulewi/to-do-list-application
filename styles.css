@@ -1,0 +1,101 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+.input-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+}
+span {
+    flex: 1;
+    margin-right: 10px;
+    display: inline-block;
+}
+.completed-task {
+    text-decoration: line-through;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
+}
+
+li span {
+    flex: 1;
+    margin-right: 10px;
+    display: inline-block;
+}
+li button {
+    padding: 8px;
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+li button:hover {
+    background-color: #c9302c;
+}
+
+select {
+    padding: 8px;
+}
+
+.category {
+    margin-right: 10px;
+    font-style: italic;
+}
+
+.important-task {
+    color: red;
+    font-weight: bold;
+}
+li button {
+    margin-left: 5px; 
+}
+.submit {
+    width: 15%;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #4CAF50; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px; 
+    font-size: 14px; 
+    transition: background-color 0.3s; 
+}
+input[type="text"] {
+    width: 60%;
+    
+    box-sizing: border-box; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+}
