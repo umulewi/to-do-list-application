@@ -9,7 +9,6 @@ function addTask() {
     const taskText = taskInput.value.trim();
     const categorySelect = document.getElementById('categorySelect');
     const selectedCategory = categorySelect.value;
-
     if (taskText !== '') {
         const tasks = getTasksFromStorage();
         tasks.unshift({ text: taskText, important: false, completed: false, category: selectedCategory });
@@ -19,7 +18,6 @@ function addTask() {
         taskInput.value = '';
     }
 }
-
 function deleteTask(index) {
     const tasks = getTasksFromStorage();
     tasks.splice(index, 1);
@@ -27,31 +25,26 @@ function deleteTask(index) {
     renderTasks(tasks);
     renderCategories();
 }
-
 function toggleImportant(index) {
     const tasks = getTasksFromStorage();
     tasks[index].important = !tasks[index].important;
     saveTasksToStorage(tasks);
     renderTasks(tasks);
 }
-
 function toggleCompleted(index) {
     const tasks = getTasksFromStorage();
     tasks[index].completed = !tasks[index].completed;
     saveTasksToStorage(tasks);
     renderTasks(tasks);
 }
-
 function handleTaskEdit(index, newText) {
     const tasks = getTasksFromStorage();
     tasks[index].text = newText;
     saveTasksToStorage(tasks);
 }
-
 function renderTasks(tasks) {
     const taskList = document.getElementById('taskList');
     taskList.innerHTML = '';
-
     // Sort tasks based on importance
     tasks.sort((a, b) => {
         if (a.important && !b.important) return -1;
