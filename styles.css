@@ -8,6 +8,9 @@ body {
     align-items: center;
     height: 100vh;
 }
+.coo{
+    font-style:checking;
+}
 .container {
     background-color: #fff;
     padding: 20px;
